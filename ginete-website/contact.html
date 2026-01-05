@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Ginete Healthcare Consulting Group. Schedule a consultation to discuss your compliance needs.">
+    <meta name="keywords" content="contact ginete, schedule consultation, healthcare compliance consultation">
+    <title>Contact Us - Ginete Healthcare Consulting Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Ginete</span>
+                    <span class="logo-subtitle">Healthcare Consulting Group</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html" class="btn-primary-nav active">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 4rem 0 3rem 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Get in Touch</h1>
+                <p class="hero-subtitle">Let's discuss how we can help strengthen your compliance program</p>
+            </div>
+        </div>
+        <div class="hero-wave"></div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="hipaa">HIPAA Compliance</option>
+                                <option value="joint-commission">Joint Commission Accreditation</option>
+                                <option value="cms">CMS Regulations</option>
+                                <option value="training">Compliance Training</option>
+                                <option value="risk-assessment">Risk Assessment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                    
+                    <div id="form-success" class="success-message" style="display: none;">
+                        <h3>✓ Message Sent!</h3>
+                        <p>Thank you for contacting us. We'll be in touch soon.</p>
+                    </div>
+                    
+                    <div id="form-error" class="error-message" style="display: none;">
+                        <h3>⚠ Error</h3>
+                        <p>There was an error sending your message. Please try again or email us directly at <a href="mailto:hello@ginete.co">hello@ginete.co</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-container">
+                    <div class="contact-info-card">
+                        <h3>Schedule a Consultation</h3>
+                        <p>Book a time that works best for you using our calendar</p>
+                        <div id="calendar-widget-container">
+                            <div class="calendar-placeholder">
+                                <p>📅 Loading calendar...</p>
+                                <button id="open-calendar" class="btn btn-accent">View Available Times</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+                        <div class="contact-detail">
+                            <strong>Email:</strong>
+                            <a href="mailto:hello@ginete.co">hello@ginete.co</a>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Website:</strong>
+                            <a href="https://ginete.co">www.ginete.co</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3>Office Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM PST</p>
+                        <p style="margin-top: 1rem;"><em>We typically respond to inquiries within 24 hours during business days.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">Ginete</span>
+                        <span class="logo-subtitle">Healthcare Consulting Group</span>
+                    </div>
+                    <p class="footer-desc">Comprehensive healthcare compliance solutions for organizations nationwide.</p>
+                    <div class="footer-contact">
+                        <p><strong>Email:</strong> <a href="mailto:hello@ginete.co">hello@ginete.co</a></p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#cms">CMS Compliance</a></li>
+                        <li><a href="services.html#dhcs-dmhc">DHCS & DMHC</a></li>
+                        <li><a href="services.html#ncqa">NCQA Accreditation</a></li>
+                        <li><a href="services.html#cms">Quality & Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="resources.html#ebooks">eBooks & Guides</a></li>
+                        <li><a href="resources.html#news">Industry News</a></li>
+                        <li><a href="resources.html#blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ginete Healthcare Consulting Group. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>

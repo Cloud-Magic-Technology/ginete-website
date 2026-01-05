@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free healthcare compliance resources including eBooks, guides, and the latest industry news from HHS, CMS, Joint Commission, and HIPAA Journal.">
+    <meta name="keywords" content="healthcare compliance ebooks, HIPAA guides, compliance news, CMS updates, Joint Commission news">
+    <title>Resources - Ginete Healthcare Consulting Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Ginete</span>
+                    <span class="logo-subtitle">Healthcare Consulting Group</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a href="contact.html" class="btn-primary-nav">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 4rem 0 3rem 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Compliance Resources</h1>
+                <p class="hero-subtitle">Free eBooks, guides, and the latest healthcare compliance news</p>
+            </div>
+        </div>
+        <div class="hero-wave"></div>
+    </section>
+
+    <section class="section" id="ebooks">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Free eBooks & Guides</h2>
+                <p>Download our comprehensive guides to strengthen your compliance program</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📘</div>
+                    <h3>CMS Compliance Guide</h3>
+                    <p>A comprehensive guide to navigating Medicare Advantage, Part D, and Medicaid managed care compliance.</p>
+                    <button class="btn btn-accent resource-download" data-resource="cms-compliance-guide">Download Free eBook</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📗</div>
+                    <h3>DHCS Medi-Cal Managed Care Manual</h3>
+                    <p>Complete resource for California Medi-Cal managed care plan compliance requirements.</p>
+                    <button class="btn btn-accent resource-download" data-resource="dhcs-medi-cal-guide">Download Free eBook</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📕</div>
+                    <h3>DMHC Survey Preparation Guide</h3>
+                    <p>Best practices and strategies for preparing for and responding to DMHC health plan surveys.</p>
+                    <button class="btn btn-accent resource-download" data-resource="dmhc-survey-guide">Download Free eBook</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📙</div>
+                    <h3>NCQA Accreditation Roadmap</h3>
+                    <p>Step-by-step guide to achieving NCQA health plan accreditation and HEDIS excellence.</p>
+                    <button class="btn btn-accent resource-download" data-resource="ncqa-accreditation-roadmap">Download Free eBook</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📔</div>
+                    <h3>Medicare Advantage Stars Rating Guide</h3>
+                    <p>Strategies for improving your MA plan's Stars ratings and quality performance.</p>
+                    <button class="btn btn-accent resource-download" data-resource="ma-stars-rating-guide">Download Free eBook</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📓</div>
+                    <h3>Health Plan Compliance Risk Assessment</h3>
+                    <p>Identify, assess, and mitigate compliance risks across CMS, DHCS, DMHC, and NCQA requirements.</p>
+                    <button class="btn btn-accent resource-download" data-resource="risk-assessment-guide">Download Free eBook</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-light);" id="news">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Industry News & Updates</h2>
+                <p>Stay informed with the latest healthcare compliance news and regulatory updates</p>
+            </div>
+            
+            <div id="news-loading" class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading latest compliance news...</p>
+            </div>
+            
+            <div id="news-container" class="news-grid" style="display: none;"></div>
+            
+            <div id="news-error" class="error-state" style="display: none;">
+                <p>Unable to load news at this time. Please try again later.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Download Modal -->
+    <div id="resource-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Download Your Free eBook</h2>
+            <p>Enter your email to receive your free compliance guide</p>
+            
+            <form id="resource-form">
+                <input type="hidden" id="resource-id" name="resource_id">
+                <div class="form-group">
+                    <label for="resource-name">Full Name *</label>
+                    <input type="text" id="resource-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-email">Email Address *</label>
+                    <input type="email" id="resource-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-organization">Organization</label>
+                    <input type="text" id="resource-organization" name="organization">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Download Now</button>
+            </form>
+            
+            <div id="resource-success" style="display: none;">
+                <div class="success-message">
+                    <h3>✓ Check Your Email!</h3>
+                    <p>Your free eBook has been sent to your inbox.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Personalized Guidance?</h2>
+                <p>Our compliance experts are here to help your organization succeed.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">Ginete</span>
+                        <span class="logo-subtitle">Healthcare Consulting Group</span>
+                    </div>
+                    <p class="footer-desc">Comprehensive healthcare compliance solutions for organizations nationwide.</p>
+                    <div class="footer-contact">
+                        <p><strong>Email:</strong> <a href="mailto:hello@ginete.co">hello@ginete.co</a></p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#cms">CMS Compliance</a></li>
+                        <li><a href="services.html#dhcs-dmhc">DHCS & DMHC</a></li>
+                        <li><a href="services.html#ncqa">NCQA Accreditation</a></li>
+                        <li><a href="services.html#cms">Quality & Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="resources.html#ebooks">eBooks & Guides</a></li>
+                        <li><a href="resources.html#news">Industry News</a></li>
+                        <li><a href="resources.html#blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ginete Healthcare Consulting Group. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/resources.js"></script>
+</body>
+</html>
