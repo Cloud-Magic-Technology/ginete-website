@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track CMS Final Rule updates year-over-year. See what's changing for Medicare Advantage, Part D, OPPS, and Physician Fee Schedule.">
+    <meta name="keywords" content="CMS Final Rule, Medicare Advantage, Part D, OPPS, Physician Fee Schedule, healthcare regulations">
+    <title>CMS Final Rules Tracker - Ginete Healthcare Consulting Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Ginete</span>
+                    <span class="logo-subtitle">Healthcare Consulting Group</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html" class="btn-primary-nav">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 4rem 0 3rem 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">CMS Final Rules Tracker</h1>
+                <p class="hero-subtitle">Stay ahead of regulatory changes with our comprehensive year-over-year CMS Final Rule analysis</p>
+            </div>
+        </div>
+        <div class="hero-wave"></div>
+    </section>
+
+    <!-- Rule Type Filter -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem; background-color: var(--bg-light);">
+        <div class="container">
+            <div class="rule-filters">
+                <div class="filter-group">
+                    <label for="rule-type-filter">Rule Type:</label>
+                    <select id="rule-type-filter" class="filter-select">
+                        <option value="all">All Rules</option>
+                        <option value="ma-part-d">Medicare Advantage & Part D</option>
+                        <option value="pfs">Physician Fee Schedule</option>
+                        <option value="opps">Outpatient Prospective Payment (OPPS)</option>
+                        <option value="ipps">Inpatient Prospective Payment (IPPS)</option>
+                        <option value="home-health">Home Health</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="year-filter">Calendar Year:</label>
+                    <select id="year-filter" class="filter-select">
+                        <option value="all">All Years</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+                <button id="compare-years-btn" class="btn btn-accent">Compare Years</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Timeline -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Final Rules Timeline</h2>
+                <p>Click on any rule to see detailed changes and implementation dates</p>
+            </div>
+
+            <div id="rules-container" class="rules-timeline">
+                <!-- Rules will be loaded here via JavaScript -->
+            </div>
+
+            <div id="loading-rules" class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading CMS Final Rules...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Modal -->
+    <div id="comparison-modal" class="modal">
+        <div class="modal-content" style="max-width: 900px;">
+            <span class="modal-close">&times;</span>
+            <h2>Year-Over-Year Comparison</h2>
+            
+            <div class="comparison-selector">
+                <div>
+                    <label for="compare-year-1">Compare:</label>
+                    <select id="compare-year-1" class="filter-select">
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+                <div style="padding: 0 1rem; font-size: 1.5rem;">vs</div>
+                <div>
+                    <label for="compare-year-2">To:</label>
+                    <select id="compare-year-2" class="filter-select">
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+                <button id="run-comparison-btn" class="btn btn-primary">Compare</button>
+            </div>
+
+            <div id="comparison-results" class="comparison-results">
+                <!-- Comparison results will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Rule Detail Modal -->
+    <div id="rule-detail-modal" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="modal-close">&times;</span>
+            <div id="rule-detail-content">
+                <!-- Rule details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help Understanding These Changes?</h2>
+                <p>Our compliance experts can help you navigate CMS Final Rule requirements and implement necessary changes.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                    <a href="#" id="subscribe-updates" class="btn btn-secondary-white">Subscribe to Updates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">Ginete</span>
+                        <span class="logo-subtitle">Healthcare Consulting Group</span>
+                    </div>
+                    <p class="footer-desc">Comprehensive healthcare compliance solutions for organizations nationwide.</p>
+                    <div class="footer-contact">
+                        <p><strong>Email:</strong> <a href="mailto:hello@ginete.co">hello@ginete.co</a></p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#cms">CMS Compliance</a></li>
+                        <li><a href="services.html#dhcs-dmhc">DHCS & DMHC</a></li>
+                        <li><a href="services.html#ncqa">NCQA Accreditation</a></li>
+                        <li><a href="services.html#cms">Quality & Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="resources.html#ebooks">eBooks & Guides</a></li>
+                        <li><a href="resources.html#news">Industry News</a></li>
+                        <li><a href="cms-final-rules.html">CMS Final Rules</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ginete Healthcare Consulting Group. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cms-rules.js"></script>
+</body>
+</html>
