@@ -1,17 +1,17 @@
 // Google Calendar Integration
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const openCalendarBtn = document.getElementById('open-calendar');
     const calendarContainer = document.getElementById('calendar-widget-container');
-    
+
     if (openCalendarBtn) {
-        openCalendarBtn.addEventListener('click', function() {
+        openCalendarBtn.addEventListener('click', function () {
             // Replace with actual Google Calendar appointment scheduling link
             // You'll need to set this up in Google Workspace Calendar
-            const calendarLink = 'https://calendar.google.com/calendar/appointments/schedules/YOUR_SCHEDULE_ID';
-            
+            const calendarLink = 'https://calendar.app.google/HxpYxirEwov26huk6';
+
             // Open in new window
             window.open(calendarLink, '_blank', 'width=800,height=600');
-            
+
             // Or embed inline (uncomment below to use embedded version)
             /*
             calendarContainer.innerHTML = `
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             */
         });
     }
-    
+
     // Alternative: Load Google Calendar Appointment Scheduling
     // This function can be used to dynamically load the calendar widget
     function loadGoogleCalendar() {
@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Your Google Workspace Appointment Schedule ID
             scheduleId: 'YOUR_SCHEDULE_ID'
         };
-        
+
         // You can customize this further based on your Google Workspace setup
         console.log('Calendar configuration loaded');
     }
-    
+
     // Uncomment to load calendar on page load
     // loadGoogleCalendar();
 });

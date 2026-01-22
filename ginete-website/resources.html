@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free healthcare compliance resources including eBooks, guides, and the latest industry news from HHS, CMS, Joint Commission, and HIPAA Journal.">
-    <meta name="keywords" content="healthcare compliance ebooks, HIPAA guides, compliance news, CMS updates, Joint Commission news">
+    <meta name="description"
+        content="Free healthcare compliance resources including eBooks, guides, and the latest industry news from HHS, CMS, Joint Commission, and HIPAA Journal.">
+    <meta name="keywords"
+        content="healthcare compliance ebooks, HIPAA guides, compliance news, CMS updates, Joint Commission news">
     <title>Resources - Ginete Healthcare Consulting Group</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="container">
@@ -49,55 +53,65 @@
                 <h2>Free eBooks & Guides</h2>
                 <p>Download our comprehensive guides to strengthen your compliance program</p>
             </div>
-            
+
             <!-- CMS Final Rules Feature -->
-            <div class="feature-highlight" style="margin-bottom: 3rem; padding: 2rem; background: linear-gradient(135deg, #0066cc, #0052a3); border-radius: 12px; color: white; text-align: center;">
+            <div class="feature-highlight"
+                style="margin-bottom: 3rem; padding: 2rem; background: linear-gradient(135deg, #0066cc, #0052a3); border-radius: 12px; color: white; text-align: center;">
                 <h3 style="color: white; font-size: 1.75rem; margin-bottom: 1rem;">📊 NEW: CMS Final Rules Tracker</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem; opacity: 0.95;">Track year-over-year changes in CMS Final Rules for Medicare Advantage, Part D, Physician Fee Schedule, and more.</p>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem; opacity: 0.95;">Track year-over-year changes in CMS
+                    Final Rules for Medicare Advantage, Part D, Physician Fee Schedule, and more.</p>
                 <a href="cms-final-rules.html" class="btn btn-secondary-white">Explore CMS Rules →</a>
             </div>
-            
+
             <div class="resources-grid">
                 <div class="resource-card">
                     <div class="resource-icon">📘</div>
                     <h3>CMS Compliance Guide</h3>
-                    <p>A comprehensive guide to navigating Medicare Advantage, Part D, and Medicaid managed care compliance.</p>
-                    <button class="btn btn-accent resource-download" data-resource="cms-compliance-guide">Download Free eBook</button>
+                    <p>A comprehensive guide to navigating Medicare Advantage, Part D, and Medicaid managed care
+                        compliance.</p>
+                    <button class="btn btn-accent resource-download" data-resource="cms-compliance-guide">Download Free
+                        eBook</button>
                 </div>
-                
+
                 <div class="resource-card">
                     <div class="resource-icon">📗</div>
                     <h3>DHCS Medi-Cal Managed Care Manual</h3>
                     <p>Complete resource for California Medi-Cal managed care plan compliance requirements.</p>
-                    <button class="btn btn-accent resource-download" data-resource="dhcs-medi-cal-guide">Download Free eBook</button>
+                    <button class="btn btn-accent resource-download" data-resource="dhcs-medi-cal-guide">Download Free
+                        eBook</button>
                 </div>
-                
+
                 <div class="resource-card">
                     <div class="resource-icon">📕</div>
                     <h3>DMHC Survey Preparation Guide</h3>
                     <p>Best practices and strategies for preparing for and responding to DMHC health plan surveys.</p>
-                    <button class="btn btn-accent resource-download" data-resource="dmhc-survey-guide">Download Free eBook</button>
+                    <button class="btn btn-accent resource-download" data-resource="dmhc-survey-guide">Download Free
+                        eBook</button>
                 </div>
-                
+
                 <div class="resource-card">
                     <div class="resource-icon">📙</div>
                     <h3>NCQA Accreditation Roadmap</h3>
                     <p>Step-by-step guide to achieving NCQA health plan accreditation and HEDIS excellence.</p>
-                    <button class="btn btn-accent resource-download" data-resource="ncqa-accreditation-roadmap">Download Free eBook</button>
+                    <button class="btn btn-accent resource-download" data-resource="ncqa-accreditation-roadmap">Download
+                        Free eBook</button>
                 </div>
-                
+
                 <div class="resource-card">
                     <div class="resource-icon">📔</div>
                     <h3>Medicare Advantage Stars Rating Guide</h3>
                     <p>Strategies for improving your MA plan's Stars ratings and quality performance.</p>
-                    <button class="btn btn-accent resource-download" data-resource="ma-stars-rating-guide">Download Free eBook</button>
+                    <button class="btn btn-accent resource-download" data-resource="ma-stars-rating-guide">Download Free
+                        eBook</button>
                 </div>
-                
+
                 <div class="resource-card">
                     <div class="resource-icon">📓</div>
                     <h3>Health Plan Compliance Risk Assessment</h3>
-                    <p>Identify, assess, and mitigate compliance risks across CMS, DHCS, DMHC, and NCQA requirements.</p>
-                    <button class="btn btn-accent resource-download" data-resource="risk-assessment-guide">Download Free eBook</button>
+                    <p>Identify, assess, and mitigate compliance risks across CMS, DHCS, DMHC, and NCQA requirements.
+                    </p>
+                    <button class="btn btn-accent resource-download" data-resource="risk-assessment-guide">Download Free
+                        eBook</button>
                 </div>
             </div>
         </div>
@@ -109,14 +123,14 @@
                 <h2>Industry News & Updates</h2>
                 <p>Stay informed with the latest healthcare compliance news and regulatory updates</p>
             </div>
-            
+
             <div id="news-loading" class="loading-state">
                 <div class="spinner"></div>
                 <p>Loading latest compliance news...</p>
             </div>
-            
+
             <div id="news-container" class="news-grid" style="display: none;"></div>
-            
+
             <div id="news-error" class="error-state" style="display: none;">
                 <p>Unable to load news at this time. Please try again later.</p>
             </div>
@@ -129,7 +143,7 @@
             <span class="modal-close">&times;</span>
             <h2>Download Your Free eBook</h2>
             <p>Enter your email to receive your free compliance guide</p>
-            
+
             <form id="resource-form">
                 <input type="hidden" id="resource-id" name="resource_id">
                 <div class="form-group">
@@ -146,7 +160,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Download Now</button>
             </form>
-            
+
             <div id="resource-success" style="display: none;">
                 <div class="success-message">
                     <h3>✓ Check Your Email!</h3>
@@ -176,9 +190,12 @@
                         <span class="logo-text">Ginete</span>
                         <span class="logo-subtitle">Healthcare Consulting Group</span>
                     </div>
-                    <p class="footer-desc">Comprehensive healthcare compliance solutions for organizations nationwide.</p>
+                    <p class="footer-desc">Comprehensive healthcare compliance solutions for organizations nationwide.
+                    </p>
                     <div class="footer-contact">
                         <p><strong>Email:</strong> <a href="mailto:hello@ginete.co">hello@ginete.co</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:8183085476">(818) 308-5476</a></p>
+                        <p><strong>Address:</strong><br>4100 W. Alameda AVE, Suite 300<br>Burbank, CA 91505</p>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -212,8 +229,8 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 Ginete Healthcare Consulting Group. All rights reserved.</p>
                 <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -222,4 +239,5 @@
     <script src="js/main.js"></script>
     <script src="js/resources.js"></script>
 </body>
+
 </html>
