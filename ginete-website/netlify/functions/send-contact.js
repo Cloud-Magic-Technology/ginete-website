@@ -38,7 +38,7 @@ exports.handler = async (event, context) => {
         
         // For production, configure with actual SMTP settings
         // This is a simplified example - in production, use environment variables
-        const transporter = nodemailer.createTransporter({
+        const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST || 'smtp.gmail.com',
             port: process.env.SMTP_PORT || 587,
             secure: false,
