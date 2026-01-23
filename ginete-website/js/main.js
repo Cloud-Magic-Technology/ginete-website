@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.disabled = true;
             
             try {
-                const response = await fetch('/.netlify/functions/send-contact', {
+                const response = await fetch('/api/send-contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.disabled = true;
         
         try {
-            const response = await fetch('/.netlify/functions/gate-resource', {
+            const response = await fetch('/api/gate-resource', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ async function loadNews() {
     const newsError = document.getElementById('news-error');
     
     try {
-        const response = await fetch('/.netlify/functions/scrape-news');
+        const response = await fetch('/api/scrape-news');
         
         if (!response.ok) {
             throw new Error('Failed to fetch news');
