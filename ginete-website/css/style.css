@@ -600,6 +600,23 @@ p {
     color: var(--bg-white);
 }
 
+.powered-by-link {
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity var(--transition-base);
+}
+
+.powered-by-link:hover {
+    opacity: 0.85;
+}
+
+.powered-by-logo {
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 968px) {
     .nav-menu {
