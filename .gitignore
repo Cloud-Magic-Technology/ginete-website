@@ -1,2 +1,22 @@
-# Local Netlify folder
-.netlify
+# Astro
+dist/
+.astro/
+
+# Cloudflare
+.wrangler/
+.dev.vars
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+*.log
+
+# Legacy
+.netlify/

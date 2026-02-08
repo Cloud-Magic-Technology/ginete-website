@@ -1,0 +1,16 @@
+{
+  "name": "ginete-healthcare-website",
+  "type": "module",
+  "version": "3.0.0",
+  "description": "Ginete Healthcare Consulting Group Website - Astro",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "wrangler pages dev dist",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
+    "astro": "^5.17.1"
+  }
+}

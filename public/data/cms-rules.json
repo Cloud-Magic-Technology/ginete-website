@@ -1,0 +1,403 @@
+{
+  "rules": [
+    {
+      "id": "ma-part-d-2026",
+      "type": "ma-part-d",
+      "title": "Medicare Advantage and Part D Final Rule",
+      "calendarYear": 2026,
+      "releaseDate": "2025-04-01",
+      "implementationDate": "2026-01-01",
+      "status": "Published",
+      "cmsLink": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-advantage-and-part-d-final-rule",
+      "keyChanges": [
+        {
+          "category": "Rate Updates",
+          "description": "MA benchmark rates updated reflecting market trends and coding intensity adjustments",
+          "impact": "high"
+        },
+        {
+          "category": "Quality & Stars",
+          "description": "New Star Ratings measures added for health equity and social determinants of health",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "Enhanced requirements for Provider Directory API and expanded FHIR-based data exchange standards",
+          "impact": "high"
+        },
+        {
+          "category": "Marketing & Enrollment",
+          "description": "Enhanced requirements for marketing materials and third-party marketing organizations",
+          "impact": "medium"
+        },
+        {
+          "category": "Network Adequacy",
+          "description": "Updated time and distance standards for specialist access",
+          "impact": "medium"
+        }
+      ],
+      "summary": "The CY 2026 MA and Part D Final Rule includes significant updates to quality measures, interoperability requirements, marketing regulations, and payment methodologies."
+    },
+    {
+      "id": "ma-part-d-2025",
+      "type": "ma-part-d",
+      "title": "Medicare Advantage and Part D Final Rule",
+      "calendarYear": 2025,
+      "releaseDate": "2024-04-01",
+      "implementationDate": "2025-01-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/newsroom/fact-sheets/2025-medicare-advantage-and-part-d-final-rule",
+      "keyChanges": [
+        {
+          "category": "Rate Updates",
+          "description": "MA rates increased by 3.70% with additional risk adjustment changes",
+          "impact": "high"
+        },
+        {
+          "category": "Quality & Stars",
+          "description": "Updated Star Ratings methodology with health equity reward factor",
+          "impact": "high"
+        },
+        {
+          "category": "Part D Benefits",
+          "description": "Implementation of Inflation Reduction Act provisions including $2,000 out-of-pocket cap",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "New Patient Access API and Provider Directory API implementation requirements with HL7 FHIR standards",
+          "impact": "high"
+        },
+        {
+          "category": "Prior Authorization",
+          "description": "New requirements for electronic prior authorization and real-time decisions",
+          "impact": "medium"
+        }
+      ],
+      "summary": "The CY 2025 rule implements major Part D redesign provisions, API interoperability requirements, and continues quality measure evolution."
+    },
+    {
+      "id": "ma-part-d-2024",
+      "type": "ma-part-d",
+      "title": "Medicare Advantage and Part D Final Rule",
+      "calendarYear": 2024,
+      "releaseDate": "2023-04-03",
+      "implementationDate": "2024-01-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/newsroom/fact-sheets/2024-medicare-advantage-and-part-d-final-rule",
+      "keyChanges": [
+        {
+          "category": "Rate Updates",
+          "description": "MA benchmark rates updated with 1.03% increase",
+          "impact": "high"
+        },
+        {
+          "category": "Quality & Stars",
+          "description": "Continued phase-in of updated Star Ratings measures",
+          "impact": "medium"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "Expansion of Patient Access API requirements to include claims and encounter data",
+          "impact": "medium"
+        },
+        {
+          "category": "Supplemental Benefits",
+          "description": "Expanded flexibility for primarily health-related supplemental benefits",
+          "impact": "medium"
+        },
+        {
+          "category": "Broker Compensation",
+          "description": "New oversight requirements for agent/broker compensation structures",
+          "impact": "low"
+        }
+      ],
+      "summary": "The CY 2024 rule focused on payment rate updates, API data expansion, and continued growth of supplemental benefits."
+    },
+    {
+      "id": "ma-part-d-2023",
+      "type": "ma-part-d",
+      "title": "Medicare Advantage and Part D Final Rule",
+      "calendarYear": 2023,
+      "releaseDate": "2022-04-04",
+      "implementationDate": "2023-01-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/newsroom/fact-sheets/2023-medicare-advantage-and-part-d-final-rule",
+      "keyChanges": [
+        {
+          "category": "Rate Updates",
+          "description": "MA benchmark rates increased by 8.5% to reflect utilization trends",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "Initial implementation of Interoperability and Patient Access Final Rule requirements",
+          "impact": "high"
+        },
+        {
+          "category": "Quality & Stars",
+          "description": "Introduction of health equity index in Star Ratings",
+          "impact": "medium"
+        },
+        {
+          "category": "Network Adequacy",
+          "description": "Updated network adequacy criteria for behavioral health providers",
+          "impact": "medium"
+        }
+      ],
+      "summary": "The CY 2023 rule marked the beginning of comprehensive interoperability requirements and health equity focus in quality measurement."
+    },
+    {
+      "id": "pfs-2026",
+      "type": "pfs",
+      "title": "Physician Fee Schedule Final Rule",
+      "calendarYear": 2026,
+      "releaseDate": "2025-11-01",
+      "implementationDate": "2026-01-01",
+      "status": "Proposed",
+      "cmsLink": "https://www.cms.gov/medicare/payment/fee-schedules/physician",
+      "keyChanges": [
+        {
+          "category": "Conversion Factor",
+          "description": "Updated conversion factor reflecting budget neutrality and statutory adjustments",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "Enhanced API requirements for clinical data exchange using USCDI v4 standards",
+          "impact": "high"
+        },
+        {
+          "category": "Telehealth",
+          "description": "Extension and expansion of telehealth services coverage",
+          "impact": "medium"
+        },
+        {
+          "category": "E/M Coding",
+          "description": "Continued refinements to evaluation and management coding guidelines",
+          "impact": "medium"
+        }
+      ],
+      "summary": "The CY 2026 PFS proposes updates to payment rates, interoperability standards, and telehealth policies."
+    },
+    {
+      "id": "pfs-2025",
+      "type": "pfs",
+      "title": "Physician Fee Schedule Final Rule",
+      "calendarYear": 2025,
+      "releaseDate": "2024-11-01",
+      "implementationDate": "2025-01-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/medicare/payment/fee-schedules/physician",
+      "keyChanges": [
+        {
+          "category": "Conversion Factor",
+          "description": "Conversion factor set at $32.35, reflecting 2.8% decrease from 2024",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "Implementation of USCDI v3 for electronic health information exchange",
+          "impact": "high"
+        },
+        {
+          "category": "Telehealth",
+          "description": "Extended telehealth flexibilities through 2025",
+          "impact": "medium"
+        },
+        {
+          "category": "Care Management",
+          "description": "New care management services and remote therapeutic monitoring codes",
+          "impact": "low"
+        }
+      ],
+      "summary": "The CY 2025 PFS includes conversion factor adjustment, enhanced interoperability standards, and continued telehealth expansion."
+    },
+    {
+      "id": "pfs-2024",
+      "type": "pfs",
+      "title": "Physician Fee Schedule Final Rule",
+      "calendarYear": 2024,
+      "releaseDate": "2023-11-02",
+      "implementationDate": "2024-01-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/medicare/payment/fee-schedules/physician",
+      "keyChanges": [
+        {
+          "category": "Conversion Factor",
+          "description": "Conversion factor updated to $33.29 with 1.25% increase",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "Adoption of USCDI v2 standards for health information exchange",
+          "impact": "medium"
+        },
+        {
+          "category": "Telehealth",
+          "description": "Continuation of COVID-19 telehealth flexibilities",
+          "impact": "medium"
+        },
+        {
+          "category": "E/M Coding",
+          "description": "Split/shared visit documentation requirements clarified",
+          "impact": "low"
+        }
+      ],
+      "summary": "The CY 2024 PFS focused on payment updates, USCDI v2 adoption, and telehealth policy continuation."
+    },
+    {
+      "id": "opps-2025",
+      "type": "opps",
+      "title": "Outpatient Prospective Payment System Final Rule",
+      "calendarYear": 2025,
+      "releaseDate": "2024-11-01",
+      "implementationDate": "2025-01-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/medicare/payment/prospective-payment-systems/hospital-outpatient",
+      "keyChanges": [
+        {
+          "category": "Payment Rates",
+          "description": "2.6% payment rate update for hospital outpatient services",
+          "impact": "high"
+        },
+        {
+          "category": "ASC Rates",
+          "description": "Ambulatory Surgical Center payment rate updates",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "New requirements for real-time benefit verification APIs and prior authorization automation",
+          "impact": "high"
+        },
+        {
+          "category": "340B Program",
+          "description": "Continued adjustments to 340B drug payment policies",
+          "impact": "medium"
+        }
+      ],
+      "summary": "The CY 2025 OPPS rule updates payment rates, introduces prior authorization API requirements, and continues 340B policy evolution."
+    },
+    {
+      "id": "opps-2024",
+      "type": "opps",
+      "title": "Outpatient Prospective Payment System Final Rule",
+      "calendarYear": 2024,
+      "releaseDate": "2023-11-01",
+      "implementationDate": "2024-01-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/medicare/payment/prospective-payment-systems/hospital-outpatient",
+      "keyChanges": [
+        {
+          "category": "Payment Rates",
+          "description": "2.8% payment rate increase for hospital outpatient departments",
+          "impact": "high"
+        },
+        {
+          "category": "ASC Rates",
+          "description": "ASC payment rate increase of 3.1%",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "Implementation of electronic prior authorization API requirements",
+          "impact": "medium"
+        },
+        {
+          "category": "340B Program",
+          "description": "Payment adjustments for 340B-acquired drugs",
+          "impact": "medium"
+        }
+      ],
+      "summary": "The CY 2024 OPPS rule provided payment increases and initiated prior authorization API implementation."
+    },
+    {
+      "id": "ipps-2025",
+      "type": "ipps",
+      "title": "Inpatient Prospective Payment System Final Rule",
+      "calendarYear": 2025,
+      "releaseDate": "2024-08-01",
+      "implementationDate": "2024-10-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps",
+      "keyChanges": [
+        {
+          "category": "Payment Rates",
+          "description": "3.1% market basket update for inpatient services",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "Expanded ADT (Admission, Discharge, Transfer) notification requirements via HL7 FHIR",
+          "impact": "high"
+        },
+        {
+          "category": "Quality Programs",
+          "description": "Updates to Hospital Inpatient Quality Reporting (IQR) Program measures",
+          "impact": "medium"
+        },
+        {
+          "category": "Wage Index",
+          "description": "Updates to wage index and geographic reclassifications",
+          "impact": "medium"
+        }
+      ],
+      "summary": "The FY 2025 IPPS rule includes payment updates, enhanced interoperability through ADT notifications, and quality program changes."
+    },
+    {
+      "id": "home-health-2025",
+      "type": "home-health",
+      "title": "Home Health Prospective Payment System Final Rule",
+      "calendarYear": 2025,
+      "releaseDate": "2024-11-07",
+      "implementationDate": "2025-01-01",
+      "status": "Active",
+      "cmsLink": "https://www.cms.gov/medicare/payment/prospective-payment-systems/home-health-pps",
+      "keyChanges": [
+        {
+          "category": "Payment Rates",
+          "description": "Home health payment rates updated with 2.7% increase",
+          "impact": "high"
+        },
+        {
+          "category": "Interoperability & API",
+          "description": "New requirements for electronic data exchange with hospitals and physicians using FHIR standards",
+          "impact": "high"
+        },
+        {
+          "category": "Quality Programs",
+          "description": "Home Health Value-Based Purchasing Model updates",
+          "impact": "medium"
+        },
+        {
+          "category": "Case-Mix Weights",
+          "description": "Updates to PDGM case-mix weights and behavioral adjustments",
+          "impact": "medium"
+        }
+      ],
+      "summary": "The CY 2025 Home Health PPS rule updates payment rates, mandates FHIR-based data exchange, and refines value-based purchasing."
+    }
+  ],
+  "categories": [
+    "Rate Updates",
+    "Quality & Stars",
+    "Part D Benefits",
+    "Marketing & Enrollment",
+    "Network Adequacy",
+    "Prior Authorization",
+    "Supplemental Benefits",
+    "Broker Compensation",
+    "Conversion Factor",
+    "Interoperability & API",
+    "Telehealth",
+    "E/M Coding",
+    "Payment Rates",
+    "ASC Rates",
+    "340B Program",
+    "Care Management",
+    "Quality Programs",
+    "Wage Index",
+    "Case-Mix Weights"
+  ]
+}

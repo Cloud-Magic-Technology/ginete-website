@@ -1,0 +1,64 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  activePage?: string;
+}
+
+const {
+  title,
+  description,
+  keywords = '',
+  ogUrl = 'https://ginete.co/',
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = 'https://ginete.co/images/og-image.jpg',
+  activePage = '',
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content={description}>
+    {keywords && <meta name="keywords" content={keywords}>}
+    <meta name="author" content="Ginete Healthcare Consulting Group">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={ogUrl}>
+    <meta property="og:title" content={ogTitle}>
+    <meta property="og:description" content={ogDescription}>
+    <meta property="og:image" content={ogImage}>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <Navbar activePage={activePage} />
+
+    <slot />
+
+    <Footer />
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
