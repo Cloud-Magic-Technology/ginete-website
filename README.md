@@ -1,6 +1,6 @@
 # Ginete Healthcare Consulting Group
 
-Website for Ginete Healthcare Consulting Group - a healthcare compliance consulting firm specializing in CMS, DHCS, DMHC, and NCQA regulatory compliance.
+Marketing website for Ginete Healthcare Consulting Group, helping healthcare organizations navigate local, state, and federal regulatory compliance.
 
 | | |
 |---|---|
@@ -11,12 +11,12 @@ Website for Ginete Healthcare Consulting Group - a healthcare compliance consult
 
 ## Features
 
-- **Service Pages** - Healthcare compliance consulting services overview
-- **CMS Final Rules Tracker** - Filterable, searchable CMS rules with comparison modals
-- **Gated Resource Downloads** - 6 PDF eBooks with email capture and admin notification
-- **Healthcare News Feed** - RSS aggregation from CMS, DHCS, NCQA sources
-- **Contact Form** - Email delivery via Resend API with validation
-- **Calendar Booking** - Google Calendar integration for consultations
+- **Compliance Services** - CMS, DHCS, DMHC, and NCQA consulting services with detailed breakdowns
+- **CMS Final Rules Tracker** - Filterable, searchable CMS rules database with side-by-side comparison
+- **Gated Resource Library** - 6 PDF compliance guides (CMS, DHCS, DMHC, NCQA, MA Stars, Risk Assessment) with email-gated downloads
+- **Healthcare News Aggregator** - Live RSS feed from CMS.gov, California DHCS, and NCQA
+- **Contact & Booking** - Contact form via Resend API + Google Calendar scheduling
+- **About & Team** - Company mission, values, and consultant credentials (CHC, CHRC, CPHRM)
 
 ## Tech Stack
 
@@ -73,12 +73,12 @@ All 8 pages are prerendered at build time (`export const prerender = true`). Onl
 
 | Page | Path | Description |
 |------|------|-------------|
-| Homepage | `/` | Hero, services overview, CTA |
-| Services | `/services` | Compliance consulting services |
-| About | `/about` | Team bios and company info |
-| Contact | `/contact` | Contact form + calendar booking |
-| Resources | `/resources` | Gated eBook downloads + news feed |
-| CMS Rules | `/cms-final-rules` | Filterable CMS rules tracker |
+| Homepage | `/` | Value proposition, core services overview, CTAs |
+| Services | `/services` | CMS, DHCS & DMHC, NCQA compliance service details |
+| About | `/about` | Mission, values, team bios and credentials |
+| Contact | `/contact` | Contact form (Resend) + Google Calendar booking |
+| Resources | `/resources` | 6 gated PDF eBook downloads + live news feed |
+| CMS Rules | `/cms-final-rules` | Searchable CMS final rules with filters and comparison |
 | Privacy | `/privacy` | Privacy policy |
 | Terms | `/terms` | Terms of service |
 
