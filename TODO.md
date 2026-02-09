@@ -1,48 +1,45 @@
 # TODO - Ginete Healthcare Consulting Website
 
-**Last Updated**: 2026-01-23
-**Status**: Active
+**Last Updated**: 2026-02-08
+**Status**: Production
 **GitHub Repo**: git@github.com:Cloud-Magic-Technology/ginete-website.git
 
 ## Current Sprint
 
 ### Ready to Start
-- [x] Verify ginete.co domain in Resend (add DNS records for SPF/DKIM/DMARC)
-- [x] Create and upload PDF eBooks to `resources/` directory (all 6 complete)
-- [ ] Deploy to Netlify (blocked: account credits exceeded)
+- [ ] Consider adding HTML email templates instead of plain text
+- [ ] Remove legacy `ginete-website/` directory (old static site)
+- [ ] Remove old `netlify.toml` at root (pre-migration artifact)
 
 ### Blocked
 - None
 
-## Completed This Session
+## Completed
 
-- [x] Commit and push pending changes (contact info, team photo, legal pages)
-- [x] Fix nodemailer.createTransporter() → createTransport() bug
+- [x] Migrate from Netlify to Cloudflare Pages
+- [x] Migrate from static HTML to Astro 5 with Cloudflare adapter
 - [x] Migrate email from nodemailer/Gmail SMTP to Resend API
-- [x] Set RESEND_API_KEY env var in Netlify
-- [x] Remove old SMTP env vars (SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS)
-- [x] Verify contact form and eBook download functions working
-- [x] Deploy to production
-
-## Technical Debt / Future Work
-
-- [ ] Add actual PDF resources for gated downloads (currently links to non-existent PDFs)
-- [ ] Consider adding HTML email templates instead of plain text
-
-## Git Status
-
-**Branch**: main
-**Uncommitted Changes**: 1 (TODO.md)
-**Last Commit**: 12a9f9b - fix: switch email provider from nodemailer/Gmail to Resend
+- [x] Verify ginete.co domain in Resend (SPF/DKIM/DMARC)
+- [x] Create and upload all 6 PDF eBook guides
+- [x] Add cookie consent banner and self-host fonts
+- [x] Add privacy policy and terms of service pages
+- [x] Add CMS Final Rules tracker page
+- [x] Set up gated resource downloads with email capture
+- [x] Add healthcare news RSS aggregator
+- [x] Deploy to production on Cloudflare Pages
+- [x] Add standardized README
 
 ## Notes & Context
 
 ### Important Decisions Made
+- Migrated from Netlify to Cloudflare Pages (Jan 2026)
+- Migrated from static HTML to Astro 5 with server-side API routes
 - Switched from nodemailer/Gmail SMTP to Resend for email delivery
-- Emails sent from noreply@ginete.co (requires domain verification in Resend)
+- Emails sent from noreply@ginete.co (domain verified in Resend)
+- RESEND_API_KEY set in Cloudflare Pages dashboard
 
 ### Resources & Links
-- Netlify: https://app.netlify.com/projects/unrivaled-mochi-bf3be6
+- Cloudflare Pages: Cloudflare dashboard
 - Live site: https://ginete.co
 - GitHub: Cloud-Magic-Technology/ginete-website
 - Resend dashboard: https://resend.com
