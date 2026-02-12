@@ -1,15 +1,18 @@
 # TODO - Ginete Healthcare Consulting Website
 
-**Last Updated**: 2026-02-08
+**Last Updated**: 2026-02-12
 **Status**: Production
 **GitHub Repo**: git@github.com:Cloud-Magic-Technology/ginete-website.git
 
 ## Current Sprint
 
+### Owner Action Required
+- [ ] Switch ginete.co URLs/DNS to point to Cloudflare Pages deployment
+
 ### Ready to Start
-- [ ] Consider adding HTML email templates instead of plain text
-- [ ] Remove legacy `ginete-website/` directory (old static site)
-- [ ] Remove old `netlify.toml` at root (pre-migration artifact)
+- [ ] Add HTML email templates instead of plain text for contact form and gated downloads
+- [ ] Remove legacy `ginete-website/` directory (old static site, still in repo)
+- [ ] Remove old `netlify.toml` at root (pre-migration artifact, still in repo)
 
 ### Blocked
 - None
@@ -28,6 +31,9 @@
 - [x] Add healthcare news RSS aggregator
 - [x] Deploy to production on Cloudflare Pages
 - [x] Add standardized README
+- [x] Update README descriptions to match actual site content
+- [x] Update TODO.md for Cloudflare Pages architecture
+- [x] Style footer powered-by logo
 
 ## Notes & Context
 
