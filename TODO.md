@@ -1,18 +1,24 @@
 # TODO - Ginete Healthcare Consulting Website
 
-**Last Updated**: 2026-02-12
+**Last Updated**: 2026-04-24
 **Status**: Production
 **GitHub Repo**: git@github.com:Cloud-Magic-Technology/ginete-website.git
 
 ## Current Sprint
 
 ### Owner Action Required
-- [ ] Switch ginete.co URLs/DNS to point to Cloudflare Pages deployment
+- [x] Switch ginete.co URLs/DNS to point to Cloudflare Pages deployment (verified 2026-04-24)
 
 ### Ready to Start
-- [ ] Add HTML email templates instead of plain text for contact form and gated downloads
-- [ ] Remove legacy `ginete-website/` directory (old static site, still in repo)
-- [ ] Remove old `netlify.toml` at root (pre-migration artifact, still in repo)
+- [x] Add HTML email templates instead of plain text for contact form and gated downloads (2026-04-24)
+- [x] Remove legacy `ginete-website/` directory (2026-04-24)
+- [x] Remove old `netlify.toml` at root (2026-04-24)
+
+### Next Up - Compliance App Project
+- [ ] Complete kickoff meeting with client (weekend 2026-04-26)
+- [ ] Gather compliance app requirements (use kickoff guide)
+- [ ] Define team structure and SOW
+- [ ] Scope compliance app MVP and produce project plan
 
 ### Blocked
 - None
