@@ -15,7 +15,7 @@ Marketing website for Ginete Healthcare Consulting Group, helping healthcare org
 - **CMS Final Rules Tracker** - Filterable, searchable CMS rules database with side-by-side comparison
 - **Gated Resource Library** - 6 PDF compliance guides (CMS, DHCS, DMHC, NCQA, MA Stars, Risk Assessment) with email-gated downloads
 - **Healthcare News Aggregator** - Live RSS feed from CMS.gov, California DHCS, and NCQA
-- **Contact & Booking** - Contact form via Resend API + Google Calendar scheduling
+- **Contact & Booking** - Contact form via Resend API + Google Calendar scheduling, with branded HTML email templates
 - **About & Team** - Company mission, values, and consultant credentials (CHC, CHRC, CPHRM)
 
 ## Tech Stack
