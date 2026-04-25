@@ -14,11 +14,13 @@
 - [x] Remove legacy `ginete-website/` directory (2026-04-24)
 - [x] Remove old `netlify.toml` at root (2026-04-24)
 
-### Next Up - Compliance App Project
-- [ ] Complete kickoff meeting with client (weekend 2026-04-26)
-- [ ] Gather compliance app requirements (use kickoff guide)
-- [ ] Define team structure and SOW
-- [ ] Scope compliance app MVP and produce project plan
+### Next Up - Compliance App Project (SaaS — sell to health plan clients)
+- [ ] Complete kickoff meeting with client (weekend 2026-04-26) — use KICKOFF-MEETING.md
+- [ ] Validate requirements in COMPLIANCE-APP-REQUIREMENTS.md at meeting
+- [ ] Confirm: product name, PHI/HIPAA scope, pilot clients, pricing model
+- [ ] Get M0 (Discovery & Design) SOW signed within 1 week of meeting
+- [ ] Create `ginete-compliance-app` GitHub repo (private) after SOW signed
+- [ ] Define team structure and hire/assign Technical Lead + Full-Stack Dev
 
 ### Blocked
 - None

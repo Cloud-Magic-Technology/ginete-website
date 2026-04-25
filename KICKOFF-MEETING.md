@@ -2,7 +2,7 @@
 
 **Meeting Date**: Weekend of 2026-04-26
 **Prepared By**: Cloud Magic Technology Group
-**Version**: 1.0
+**Version**: 2.0 — Updated: confirmed SaaS product sold to health plan clients
 
 ---
 
@@ -10,200 +10,283 @@
 
 1. Confirm the website is live and client is satisfied with deliverables
 2. Identify gaps or quick wins for the website (phase 1 closeout)
-3. Scope the compliance app — define what it is, who uses it, and what success looks like
-4. Align on team structure, timeline, and budget expectations
-5. Define the engagement model that makes this project profitable for CMTG
+3. Define the SaaS product — name, positioning, who buys it, who uses it
+4. Identify the first 2–3 pilot clients and what they need on day one
+5. Align on team structure, HIPAA/compliance obligations, and pricing model
+6. Define the engagement that makes this profitable for CMTG
+
+---
+
+## What We Know
+
+**Confirmed**: This is a **multi-tenant SaaS product** that Ginete will sell/license to health plan clients — not internal tooling.
+
+This changes everything:
+- Architecture must be multi-tenant from day one (no retrofitting later)
+- HIPAA Business Associate Agreement (BAA) almost certainly required
+- Subscription billing infrastructure needed (Stripe)
+- Customer onboarding, offboarding, and data isolation are first-class concerns
+- Enterprise sales cycle — buyers are compliance officers and C-suite, not self-serve
+- Ginete needs a pricing model before launch, not after
 
 ---
 
 ## Part 1: Website Phase Closeout
 
 ### Status to Report to Client
-- Site is live at ginete.co on Cloudflare Pages (fast, global CDN)
-- 8 pages + 3 API routes (contact form, gated downloads, news aggregator)
+- Site is live at ginete.co on Cloudflare Pages
 - HTML email templates now active for all form submissions
-- CMS Final Rules tracker page live
-- 6 gated eBook guides generating leads
+- CMS Final Rules tracker live, 6 gated eBook guides generating leads
+- All phase 1 items complete
 
 ### Questions to Ask
-- [ ] Are you receiving contact form submissions correctly?
-- [ ] Have you downloaded any of the gated eBooks — did you receive the email?
-- [ ] Is the CMS Rules tracker data current and accurate?
-- [ ] Any copy changes or pages you'd like added before we close phase 1?
-- [ ] Do you want Google Analytics / conversion tracking added?
-
-### Potential Quick Wins (Phase 1 Extras)
-- Google Analytics 4 + event tracking on form submissions and downloads
-- Calendly embed on the contact page
-- Blog/news section for thought leadership content
-- Testimonials section on homepage
+- [ ] Are you receiving contact form submissions and eBook notifications?
+- [ ] Is the CMS Rules tracker data current?
+- [ ] Any copy changes before we officially close phase 1?
+- [ ] Do you want Google Analytics + conversion tracking on the site?
+- [ ] Should the website start promoting/linking to the compliance app once it's in beta?
 
 ---
 
-## Part 2: Compliance App — Discovery
+## Part 2: Compliance App — SaaS Discovery
 
-### What Problem Are We Solving?
-Ask the client to describe the problem in their own words first. Then probe:
+### Product Definition Questions
 
-- [ ] Who is the primary user? (health plan compliance officers, internal Ginete team, client organizations?)
-- [ ] What does their current compliance tracking workflow look like today? (spreadsheets, manual, another tool?)
-- [ ] What regulatory bodies are in scope? (CMS, DHCS, DMHC, NCQA, other?)
-- [ ] Is this a tool Ginete uses internally, sells to clients as SaaS, or both?
-- [ ] How many organizations/clients would use this at launch?
-- [ ] What data sources need to feed into it? (regulatory databases, internal docs, audit results?)
+**What is it?**
+- [ ] What do you want to call it? (Standalone brand vs. "Ginete Comply", "Ginete Platform", etc.)
+- [ ] One sentence: what does this product do for a health plan?
+- [ ] What is the core workflow a user completes every week inside the app?
 
-### Core App Concept Hypotheses (validate with client)
-Based on Ginete's domain, the compliance app likely involves one or more of:
+**Who buys it?**
+- [ ] Title of the economic buyer? (Chief Compliance Officer, VP Compliance, other?)
+- [ ] Title of the day-to-day user?
+- [ ] Are those the same person or different?
+- [ ] What size health plans? (small community plans, regional, national?)
+- [ ] California-only at launch or national?
 
-| Concept | Description |
-|---------|-------------|
-| **Compliance Calendar** | Track regulatory deadlines, submission windows, audit dates by plan/client |
-| **Regulation Tracker** | Monitor CMS/DHCS/DMHC rule changes and tie them to action items |
-| **Audit Readiness Dashboard** | Document status (uploaded, reviewed, approved) per regulation/survey |
-| **Gap Assessment Tool** | Questionnaire-driven gap analysis generating a prioritized action plan |
-| **Client Portal** | Health plan clients log in to track their own compliance status |
-| **Task & Workflow Manager** | Assign compliance tasks to team members with deadlines and approval steps |
+**Why would they buy it over alternatives?**
+- [ ] What tools are health plans using today? (spreadsheets, SharePoint, Salesforce, a competitor?)
+- [ ] What makes those tools fail for compliance work?
+- [ ] What is Ginete's unique advantage? (domain expertise embedded in the product, California-specific, relationship network?)
 
-Ask: *"If you could only build one of these first, which solves the most urgent problem?"*
+### Core Feature Hypotheses — Validate Each
 
-### Scope Clarification Questions
-- [ ] Should this be web-only, or mobile too?
-- [ ] Multi-tenant (multiple health plan clients) or single-org?
-- [ ] Role-based access? (admin, analyst, read-only reviewer?)
-- [ ] Do clients need to upload documents?
-- [ ] Does the app need to generate reports or exports (PDF, Excel)?
-- [ ] Any existing tools we need to integrate with? (Salesforce, SharePoint, etc.)
-- [ ] What does "done" look like in 6 months?
+| Feature | Hypothesis | Must-Have / Nice-to-Have? |
+|---------|-----------|--------------------------|
+| **Compliance Calendar** | Track regulatory deadlines, submission windows, audit dates per plan | Must-Have |
+| **Regulation Change Feed** | Monitor CMS/DHCS/DMHC rule updates, tied to action items | Must-Have |
+| **Audit Readiness Dashboard** | Document status (uploaded, reviewed, approved) per survey/regulation | Must-Have |
+| **Gap Assessment Tool** | Questionnaire → prioritized action plan with assigned owners | High Priority |
+| **Task & Workflow Manager** | Assign tasks to team members, deadlines, approval chains | High Priority |
+| **Document Vault** | Secure upload/storage of policies, attestations, evidence | High Priority |
+| **Client Portal (for Ginete)** | Ginete staff monitor all tenant health plans from one view | Must-Have |
+| **Reporting & Exports** | PDF/Excel reports for board presentations, regulator responses | High Priority |
+| **AI-Assisted Guidance** | "What does this CMS rule mean for my plan?" chat interface | Phase 2 |
+| **Regulator Integration** | Pull data directly from CMS APIs | Phase 2 |
 
-### Budget & Timeline Expectations
-- [ ] Do you have a budget range in mind?
-- [ ] Is there a hard deadline driving the timeline? (regulatory event, internal milestone?)
-- [ ] Would you prefer fixed-price milestone billing or T&M?
-- [ ] Do you want to be hands-on or hands-off during development?
+Ask: *"If a health plan could only use 3 of these features on day one, which 3 would make them pay for it?"*
+
+### Pilot Client Questions
+- [ ] Do you have existing clients who have expressed interest in this product?
+- [ ] Who are the first 2–3 health plans you'd want to pilot with?
+- [ ] Are any willing to be design partners? (co-develop features, give early feedback, pay reduced rate)
+- [ ] What would make a pilot client say "yes" quickly?
+
+### HIPAA & Security Questions
+- [ ] Will the app store or process Protected Health Information (PHI)?
+  - If yes: HIPAA BAA required with every customer. We need compliance baked in from day one.
+- [ ] Do health plan clients have data residency requirements? (US-only storage?)
+- [ ] Will clients require a penetration test or security review before signing?
+- [ ] SOC 2 Type II — is this a blocker for your target clients, or is a security questionnaire sufficient?
+- [ ] SSO requirement? (most enterprise health plans use Azure AD, Okta, or Google Workspace)
+- [ ] Audit log requirement? (who accessed what, when — typical in regulated industries)
+
+### Pricing Questions
+- [ ] Have you thought about pricing? What feels right?
+- [ ] Per-seat (per user), per-organization flat fee, or usage-based?
+- [ ] Annual contracts or monthly?
+- [ ] What would a health plan currently pay for a comparable tool (or consultants doing this manually)?
+- [ ] Are you bundling consulting hours with the software subscription?
+
+**CMTG Pricing Benchmarks for Reference** (share if helpful):
+- Small health plan (<50k members): $500–1,500/mo
+- Mid-size plan (50k–500k members): $2,000–5,000/mo
+- Large plan (500k+): $8,000–15,000/mo or custom
+- Implementation/onboarding fee: $3,000–10,000 one-time
+- Consulting bundle: software + X hours/quarter Ginete expert time
 
 ---
 
-## Part 3: Team Structure & Roles
+## Part 3: Technical Architecture (CMTG Internal)
 
-### CMTG Team (proposed)
+### Confirmed Stack
 
-| Role | Person | Responsibilities |
-|------|--------|-----------------|
-| **Engagement Lead** | Chris Marsh | Client relationship, scope management, profitability |
-| **Technical Lead / Architect** | TBD | System design, database schema, API architecture |
-| **Full-Stack Developer** | TBD | Feature implementation (React/TypeScript + Supabase) |
-| **UI/UX Designer** | TBD | Wireframes, component design, Figma handoff |
-| **QA / Compliance SME** | TBD | Testing, verify regulatory accuracy of app logic |
-| **DevOps** | Chris Marsh | Cloudflare Pages/Workers, Supabase, CI/CD, environments |
+| Layer | Technology | Rationale |
+|-------|-----------|-----------|
+| **Frontend** | React 19 + TypeScript + Tailwind CSS | CMTG standard, fast iteration |
+| **UI Components** | shadcn/ui | Accessible, unstyled, composable |
+| **Backend / DB** | Supabase (PostgreSQL + Row Level Security) | Multi-tenant isolation via RLS, real-time, auth built-in |
+| **Auth** | Supabase Auth + Clerk (if SSO needed) | Supabase for basic auth; Clerk for enterprise SAML/OIDC |
+| **API** | Supabase Edge Functions + Cloudflare Workers | Serverless, scales to zero, low cost |
+| **File Storage** | Supabase Storage | Document vault, audit evidence uploads |
+| **Billing** | Stripe Billing + Stripe Customer Portal | Subscriptions, invoicing, plan upgrades |
+| **Email** | Resend | Transactional alerts, deadline notifications |
+| **Hosting** | Cloudflare Pages (frontend) + Supabase (backend) | Near-zero infra cost |
+| **CI/CD** | GitHub Actions → Cloudflare Pages | Auto-deploy on merge to main |
+| **Monitoring** | Splunk HEC (CMTG standard) | Error tracking, audit log ingestion |
+
+### Multi-Tenancy Model
+
+```
+Organizations (health plans)
+  └── Users (compliance officers, analysts, read-only)
+       └── Data (regulations, tasks, documents, deadlines)
+
+Row Level Security policy: users only see rows where org_id = their org
+Ginete admin users: can see all orgs (super-admin role)
+```
+
+### Data Model (Draft)
+
+```
+organizations         — health plan tenants
+users                 — people with access (linked to org)
+regulations           — CMS/DHCS/DMHC/NCQA rules (global, seeded by Ginete)
+compliance_items      — org-specific tracking of each regulation
+tasks                 — assigned action items with owner + deadline
+documents             — uploaded files linked to compliance_items
+deadlines             — regulatory calendar events per org
+audit_logs            — who did what, when (immutable append-only)
+subscriptions         — Stripe subscription state per org
+```
+
+### HIPAA Technical Safeguards (if PHI is in scope)
+- Encryption at rest: Supabase provides AES-256 by default
+- Encryption in transit: TLS 1.2+ enforced
+- Audit logs: immutable, tamper-evident log of all data access
+- Access controls: role-based, least-privilege
+- BAA: Supabase offers BAA on paid plans; Cloudflare offers BAA on Business+
+- Data retention and deletion: org offboarding must purge or export all data
+
+---
+
+## Part 4: Team Structure & Roles
+
+### CMTG Team (proposed for SaaS build)
+
+| Role | Person | Weekly Commitment | Responsibilities |
+|------|--------|------------------|-----------------|
+| **Engagement Lead** | Chris Marsh | 5–10 hrs | Client relationship, SOW, invoicing, architecture decisions |
+| **Technical Lead** | TBD | 20–30 hrs | System design, DB schema, code review, security |
+| **Full-Stack Developer** | TBD | 30–40 hrs | Feature implementation, API, UI |
+| **UI/UX Designer** | TBD | 10–15 hrs | Figma wireframes → production components |
+| **Compliance SME** | Ginete team | 2–4 hrs | Domain accuracy review, workflow validation |
+| **DevOps / Infra** | Chris Marsh | 5 hrs | Supabase config, CI/CD, environments, monitoring |
 
 ### Client-Side Team (identify in meeting)
 
-| Role | Ask Client |
-|------|-----------|
-| **Executive Sponsor** | Who has final sign-off? |
-| **Product Owner** | Who defines requirements and accepts deliverables? |
-| **Subject Matter Expert** | Who can answer compliance domain questions quickly? |
-| **IT Contact** | Who handles SSO, data security approvals, API access? |
-| **End Users** | Can we schedule user interviews / feedback sessions? |
+| Role | Who Is This? |
+|------|-------------|
+| **Executive Sponsor** | Final sign-off, budget owner |
+| **Product Owner** | Defines features, accepts deliverables, attends weekly calls |
+| **Compliance SME** | Answers domain questions in <24 hrs |
+| **IT / Security Contact** | Approves HIPAA controls, SSO requirements |
+| **Pilot Client Contacts** | 2–3 health plan contacts willing to test early |
 
 ### Communication Cadence
-- Weekly status call (30 min) — progress, blockers, decisions needed
-- Bi-weekly demo — show working software, get feedback
-- Slack/Teams channel for async questions
-- Monthly billing + budget review
+- **Weekly**: 30-min status call — progress, blockers, decisions needed
+- **Bi-weekly**: Demo of working software — get feedback before building more
+- **Monthly**: Budget + invoice review, roadmap prioritization
+- **Async**: Slack or Teams channel, response SLA <4 hrs business hours
 
 ---
 
-## Part 4: Making This Project Profitable
+## Part 5: Engagement Model & Profitability
 
-### Engagement Model Options
+### Recommended Model: Build-to-Own with Retainer
 
-| Model | Pros | Cons | Best For |
-|-------|------|------|----------|
-| **Fixed-Price Milestones** | Predictable for client, forces scope clarity | CMTG absorbs overruns | Well-defined MVPs |
-| **Time & Materials** | CMTG never loses money, transparent | Client anxiety about cost | Exploratory/evolving scope |
-| **Retainer + Sprint** | Recurring revenue, predictable capacity | Requires ongoing value delivery | Long-term engagements |
-| **SaaS Revenue Share** | High upside if product succeeds | Long payback period, shared risk | If Ginete is building a product to sell |
+Ginete pays CMTG to build the product. Ginete owns the product and keeps 100% of SaaS revenue. CMTG earns recurring retainer for ongoing development and hosting.
 
-**Recommendation**: Fixed-price Phase 1 (MVP) to win trust, then move to monthly retainer for iterations.
+**Alternative**: Revenue share (CMTG takes 10–15% of SaaS revenue in exchange for reduced build fees). Higher upside, longer payback. Only offer if Ginete is budget-constrained.
 
-### Milestone Structure (draft)
+### Milestone Pricing (SaaS-Calibrated)
 
-| Milestone | Deliverable | Suggested Price |
-|-----------|-------------|-----------------|
-| **M0 — Discovery & Design** | Requirements doc, wireframes, architecture plan | $5,000–8,000 |
-| **M1 — MVP Backend** | Auth, data model, core API, admin dashboard | $12,000–18,000 |
-| **M2 — MVP Frontend** | Full UI, compliance tracking core features | $12,000–18,000 |
-| **M3 — Beta + UAT** | Testing, client feedback, bug fixes, deploy | $5,000–8,000 |
-| **M4 — Launch + Handoff** | Production deploy, training, docs | $3,000–5,000 |
-| **Ongoing Retainer** | Monthly support, iterations, hosting management | $2,000–4,000/mo |
+| Milestone | Deliverable | Timeline | Price |
+|-----------|-------------|----------|-------|
+| **M0 — Discovery & Design** | Product spec, wireframes, data model, security plan | 3 weeks | $8,000–12,000 |
+| **M1 — Foundation** | Multi-tenant auth, org management, Stripe billing, admin panel | 4 weeks | $15,000–20,000 |
+| **M2 — Core Product** | Compliance tracking, calendar, task management, doc vault | 6 weeks | $20,000–28,000 |
+| **M3 — Pilot** | UAT with 2–3 health plans, bug fixes, onboarding flow | 3 weeks | $8,000–12,000 |
+| **M4 — Launch** | Production deploy, SOC 2 prep docs, training, handoff | 2 weeks | $5,000–8,000 |
+| **Retainer** | Monthly dev sprints, hosting, monitoring, support | Ongoing | $4,000–6,000/mo |
 
-*Adjust based on scope validated in meeting.*
+**Total build cost**: ~$56,000–80,000 for full MVP + 12 months retainer = $48,000–72,000/yr
+**Ginete break-even**: 10–15 mid-size health plan clients at $500–800/mo covers retainer + profit
 
-### Profitability Levers
-1. **Scope lock** — get a signed SOW before writing code. Change requests = change orders.
-2. **Use CMTG stack** — Supabase + Cloudflare Pages = near-zero infra cost.
-3. **Component reuse** — build a shared design system once (shadcn/ui base), reuse across client projects.
-4. **Automate QA** — Playwright tests reduce manual QA time on every release.
-5. **Recurring revenue** — hosting, maintenance retainer, and SLA coverage are high-margin.
-6. **IP ownership** — CMTG retains rights to generic components; client owns their data and config.
+### Profitability Levers for CMTG
+1. **Scope gate at M0** — no code until spec is signed. M0 deliverable defines exactly what M1–M4 include.
+2. **CMTG IP clause** — generic components (auth, billing, multi-tenancy shell) remain CMTG IP, reusable in future SaaS builds.
+3. **Stripe takes the billing complexity** — don't build billing logic, use Stripe Billing + Customer Portal.
+4. **Supabase RLS for multi-tenancy** — don't build tenant isolation middleware; let Postgres do it.
+5. **Seeded regulation data = moat** — Ginete's domain expertise as structured data in the DB is the product differentiator and hardest thing to replicate.
+6. **Hosting is high-margin recurring** — Supabase Pro + Cloudflare Pages costs ~$50–100/mo to host, bill $500–1,000/mo.
 
-### Signals This is a Good Engagement
-- Client has budget authority (not waiting for approval)
-- Clear executive sponsor identified
-- Well-defined problem (not "build us an AI")
-- Existing manual process to automate (Occam's razor for scope)
-- Client is hands-on enough to give feedback but not micro-manage
-
-### Red Flags to Watch For
-- No internal champion at client org
-- Scope described as "like Salesforce but for compliance"
-- No budget range shared after direct ask
-- "We just need something simple" with 47 requirements
-- Decision-making by committee with no clear owner
+### Red Flags (SaaS Edition)
+- Client wants to own all IP including reusable components — negotiate hard or walk away
+- No pilot clients identified — "we'll find customers after it's built" is a red flag
+- HIPAA requirements unclear — do not start building until PHI scope is settled
+- Scope creep framed as "just one more thing" — every addition is a change order
+- Expecting launch in <8 weeks — set realistic expectations now
 
 ---
 
-## Part 5: Discovery Questions — Master List
+## Part 6: Master Question List for Meeting
 
-Copy and bring to the meeting. Check off as you go.
+### Product & Market
+- [ ] What do you want to call this product?
+- [ ] Describe the ideal customer in one sentence
+- [ ] What 3 features would make a health plan pay for it on day one?
+- [ ] Who are the first 2–3 pilot health plans you have in mind?
+- [ ] What do those pilots need that they can't get elsewhere?
+- [ ] What would make this product defensible against a large vendor copying it?
 
-### Business Context
-- [ ] What is Ginete's primary revenue model today? (consulting hours, retainer, other?)
-- [ ] Who are your target clients for the app? (health plans, hospitals, ACOs, other?)
-- [ ] What geography? California-focused or national?
-- [ ] What is the competitive landscape? (existing tools, why aren't clients using those?)
-- [ ] What does success look like in 12 months for this app?
+### Commercial & GTM
+- [ ] What's the pricing model? Per seat, per org, tiered by plan size?
+- [ ] Annual or monthly contracts?
+- [ ] Will Ginete sell this through existing consulting relationships or new sales motion?
+- [ ] Will consulting services be bundled with the software?
+- [ ] What's the target MRR at end of year 1?
 
-### Users & Workflow
-- [ ] Walk me through how you handle a client compliance engagement today, step by step
-- [ ] What takes the most time that shouldn't?
-- [ ] What information do you track in spreadsheets that you wish was in a system?
-- [ ] How many active client engagements do you run at once?
-- [ ] What happens when a regulation changes — how does that propagate to clients?
+### Security & Compliance (for the product itself)
+- [ ] Will the app store PHI? (HIPAA BAA required if yes)
+- [ ] Data residency requirements from target clients?
+- [ ] SSO required by target clients? (Azure AD, Okta, Google)
+- [ ] Audit log / access log requirement?
+- [ ] Any prospect has already asked about SOC 2?
 
-### Technical Constraints
-- [ ] Any data security requirements? (HIPAA BAA needed? SOC 2?)
-- [ ] SSO requirement? (Google Workspace, Azure AD, Okta?)
-- [ ] Any regulatory data sources you already have access to (APIs, feeds)?
-- [ ] Existing software stack at client organizations we need to integrate with?
-
-### Commercial
-- [ ] Is this internal tooling or a product you'd sell/license to clients?
-- [ ] If selling: what would you charge clients per month?
-- [ ] What is your timeline pressure? Any external deadline?
-- [ ] Have you budgeted for this? Ballpark range?
-- [ ] Who else is involved in the buy decision?
-
----
-
-## Next Steps After Meeting
-
-1. **Within 24 hours**: Send meeting summary + decisions doc to client
-2. **Within 48 hours**: Draft SOW v1 based on validated scope
-3. **Within 1 week**: Deliver discovery milestone (wireframes + architecture outline) if M0 is agreed
-4. **Immediate**: Open a project in GitHub (`ginete-compliance-app`) and set up Supabase project
+### Timeline & Budget
+- [ ] Is there a regulatory event or conference creating a deadline?
+- [ ] Budget for the build — ballpark range?
+- [ ] Fixed-price milestones or retainer preference?
+- [ ] Is anyone else bidding on this? (competitive situation)
 
 ---
 
-*Document owner: Chris Marsh / CMTG — update after meeting with client answers and decisions*
+## Immediate Next Steps
+
+### Before the Meeting
+- [ ] Review this doc, annotate any answers you already know
+- [ ] Identify which pilot clients you want to bring up by name
+- [ ] Have a verbal pricing range ready ($X/month for a mid-size plan)
+
+### After the Meeting (CMTG actions, within 48 hrs)
+1. Send meeting summary with all decisions documented
+2. Draft SOW v1 covering M0 (Discovery & Design)
+3. Get M0 signed before any further work begins
+4. Create GitHub repo `ginete-compliance-app` (private)
+5. Spin up Supabase project (free tier for dev)
+6. Schedule first design session for wireframes
+
+---
+
+*Document owner: Chris Marsh / CMTG — v2.0 updated 2026-04-24 after confirming SaaS product model*
