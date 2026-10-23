@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { env } from 'cloudflare:workers';
 
 export const POST: APIRoute = async ({ request, locals }) => {
     try {
@@ -12,7 +13,6 @@ export const POST: APIRoute = async ({ request, locals }) => {
             });
         }
 
-        const { env } = (locals as any).runtime;
 
         const html = `<!DOCTYPE html>
 <html lang="en">

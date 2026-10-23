@@ -1,5 +1,19 @@
 {
   "name": "ginete-website-astro",
+  "main": "@astrojs/cloudflare/entrypoints/server",
   "compatibility_date": "2024-12-01",
-  "pages_build_output_dir": "dist"
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    { "binding": "SESSION", "id": "dc4041150fde4cada3502a5d20659a3c" }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  },
+  "observability": {
+    "enabled": true
+  }
 }

@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { env } from 'cloudflare:workers';
 
 const resources: Record<string, { title: string; description: string }> = {
     'cms-compliance-guide': {
@@ -48,7 +49,6 @@ export const POST: APIRoute = async ({ request, locals }) => {
             });
         }
 
-        const { env } = (locals as any).runtime;
 
         const userHtml = `<!DOCTYPE html>
 <html lang="en">
